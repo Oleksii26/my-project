@@ -1,0 +1,12 @@
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.containet {
+    border: 1px solid gray;
+    width: auto;
+    height: 85vh;
+}
+

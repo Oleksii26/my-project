@@ -1,0 +1,23 @@
+.container {
+    width: 200px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.home {
+    max-width: 1600px;
+    display: flex;
+}
+
+.form {
+    width: 200px;
+}
