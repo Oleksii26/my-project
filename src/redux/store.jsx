@@ -3,11 +3,12 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from "redux-persist/lib/storage"
 import { authReducer } from "./auth/authSlice"
 import { contactsReducer } from "./contacts/contactsSlice"
+import { modalReducer } from "./modal/modalSlice"
 
 const middleware = [
     ...getDefaultMiddleware({
-        serializableCheck:{
-            ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER ]
+        serializableCheck: {
+            ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
         }
     })
 ]
@@ -22,6 +23,7 @@ export const store = configureStore({
     reducer: {
         auth: persistReducer(authPersistConfig, authReducer),
         contacts: contactsReducer,
+        modal: modalReducer,
     },
     middleware,
     devTools: process.env.NODE_ENV === 'development'

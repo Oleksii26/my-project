@@ -7,6 +7,7 @@ import { Menu } from "./components/Menu/Menu";
 import { Footer } from "./components/Footer/Footer";
 
 function App() {
+// const isLoading = true
 const isLoading = useSelector(state => state.auth.isLoggedin)
   const dispatch = useDispatch()
   useEffect(() => {

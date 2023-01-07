@@ -8,7 +8,7 @@ import { Contacts } from './Friends/Contacts'
 export const Menu = () => {
     return (<div className={css.container}>
         <ul className={css.list}>
-            <li className={css.item}><Link className={css.link} to='/mypage'>Моля страница</Link></li>
+            <li className={css.item}><Link className={css.link} to='/'>Моля страница</Link></li>
             <li className={css.item}><Link className={css.link} to='/news'>Новости</Link></li>
             <li className={css.item}><Link className={css.link} to='/manager'>Менеджер</Link></li>
             <li className={css.item}><Link className={css.link} to='/contacts'>Друзья</Link></li>
@@ -28,10 +28,11 @@ export const Menu = () => {
         </ul>
         <div>
             <Routes>
-                <Route path='/mypage' element={<Photo />} />
+                <Route path='/' element={<Photo />} />
                 <Route path='/news' element={<News />} />
                 <Route path='/manager' element={<Games />} />
                 <Route path='/contacts' element={<Contacts />} />
+                <Route path='*' element={<Photo />} />
             </Routes>
         </div>
     </div>

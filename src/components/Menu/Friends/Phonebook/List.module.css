@@ -1,0 +1,17 @@
+.list {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+}
+
+
+.card {
+   
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    border: 1px solid red;
+    border-radius: 10px;
+}

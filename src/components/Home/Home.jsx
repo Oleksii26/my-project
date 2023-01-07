@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { NavLink } from 'react-router-dom'
 import { HomeReister } from '../HomeRegister/HomeReister'
 import css from './Home.module.css'
 import { logIn } from '../../redux/auth/authOperation'
+import { SendPass } from './SendPass/SendPass'
 
 
 export const Home = () => {
@@ -45,15 +45,15 @@ export const Home = () => {
               onChange={handleInput} />
           </label>
           <button>LogIn</button>
-          <NavLink className={css.link}>Забыли пароль?</NavLink>
+          <SendPass />
         </form>
 
       </aside>
       <div >
-      <HomeReister />
+        <HomeReister />
       </div>
     </div>
-  
+
 
   )
 }
